@@ -1,0 +1,10 @@
+C:\Users\Naty XD\Downloads\Alimente-se-Bem-BackEnd\alimentesebem.sesi.solution\alimentesebem.sesi.repository\obj\Debug\netstandard2.0\alimentesebem.sesi.repository.csproj.CoreCompileInputs.cache
+C:\Users\Naty XD\Downloads\Alimente-se-Bem-BackEnd\alimentesebem.sesi.solution\alimentesebem.sesi.repository\obj\Debug\netstandard2.0\alimentesebem.sesi.repository.AssemblyInfoInputs.cache
+C:\Users\Naty XD\Downloads\Alimente-se-Bem-BackEnd\alimentesebem.sesi.solution\alimentesebem.sesi.repository\obj\Debug\netstandard2.0\alimentesebem.sesi.repository.AssemblyInfo.cs
+C:\Users\Naty XD\Downloads\Alimente-se-Bem-BackEnd\alimentesebem.sesi.solution\alimentesebem.sesi.repository\bin\Debug\netstandard2.0\alimentesebem.sesi.repository.deps.json
+C:\Users\Naty XD\Downloads\Alimente-se-Bem-BackEnd\alimentesebem.sesi.solution\alimentesebem.sesi.repository\bin\Debug\netstandard2.0\alimentesebem.sesi.repository.dll
+C:\Users\Naty XD\Downloads\Alimente-se-Bem-BackEnd\alimentesebem.sesi.solution\alimentesebem.sesi.repository\bin\Debug\netstandard2.0\alimentesebem.sesi.repository.pdb
+C:\Users\Naty XD\Downloads\Alimente-se-Bem-BackEnd\alimentesebem.sesi.solution\alimentesebem.sesi.repository\bin\Debug\netstandard2.0\alimentesebem.sesi.domain.dll
+C:\Users\Naty XD\Downloads\Alimente-se-Bem-BackEnd\alimentesebem.sesi.solution\alimentesebem.sesi.repository\bin\Debug\netstandard2.0\alimentesebem.sesi.domain.pdb
+C:\Users\Naty XD\Downloads\Alimente-se-Bem-BackEnd\alimentesebem.sesi.solution\alimentesebem.sesi.repository\obj\Debug\netstandard2.0\alimentesebem.sesi.repository.dll
+C:\Users\Naty XD\Downloads\Alimente-se-Bem-BackEnd\alimentesebem.sesi.solution\alimentesebem.sesi.repository\obj\Debug\netstandard2.0\alimentesebem.sesi.repository.pdb

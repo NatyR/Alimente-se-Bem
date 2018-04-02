@@ -1,0 +1,28 @@
+Gera  Migrations
+dotnet ef migrations add DefaultConnection --startup-project ..\alimentesebem.sesi.webapi\alimentesebem.sesi.webapi.csproj
+
+Gera o Banco de Dados
+dotnet ef database update --startup-project ..\alimentesebem.sesi.webapi\alimentesebem.sesi.webapi.csproj
+
+netcoreapp2.0/alimentesebem.sesi.webapi.dll
+
+Atualiza o Banco 
+dotnet ef database update
+
+
+SmarteAsp
+alimentesebem
+Sesi1234
+
+API aprovada pela Prof Helena
+usuario - ok
+nutricionistas - ok
+eventos - ok
+unidades_sesi
+noticias - ok
+videos - ok
+categorias_noticias - ok
+categorias_videos - ok
+
+
+

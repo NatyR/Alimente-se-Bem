@@ -1,0 +1,15 @@
+C:\Users\Naty XD\Downloads\Alimente-se-Bem-BackEnd\alimentesebem.sesi.solution\alimentesebem.sesi.webapi\bin\Debug\netcoreapp2.0\alimentesebem.sesi.webapi.deps.json
+C:\Users\Naty XD\Downloads\Alimente-se-Bem-BackEnd\alimentesebem.sesi.solution\alimentesebem.sesi.webapi\bin\Debug\netcoreapp2.0\alimentesebem.sesi.webapi.runtimeconfig.json
+C:\Users\Naty XD\Downloads\Alimente-se-Bem-BackEnd\alimentesebem.sesi.solution\alimentesebem.sesi.webapi\bin\Debug\netcoreapp2.0\alimentesebem.sesi.webapi.runtimeconfig.dev.json
+C:\Users\Naty XD\Downloads\Alimente-se-Bem-BackEnd\alimentesebem.sesi.solution\alimentesebem.sesi.webapi\bin\Debug\netcoreapp2.0\alimentesebem.sesi.webapi.dll
+C:\Users\Naty XD\Downloads\Alimente-se-Bem-BackEnd\alimentesebem.sesi.solution\alimentesebem.sesi.webapi\bin\Debug\netcoreapp2.0\alimentesebem.sesi.webapi.pdb
+C:\Users\Naty XD\Downloads\Alimente-se-Bem-BackEnd\alimentesebem.sesi.solution\alimentesebem.sesi.webapi\obj\Debug\netcoreapp2.0\alimentesebem.sesi.webapi.csproj.CoreCompileInputs.cache
+C:\Users\Naty XD\Downloads\Alimente-se-Bem-BackEnd\alimentesebem.sesi.solution\alimentesebem.sesi.webapi\obj\Debug\netcoreapp2.0\alimentesebem.sesi.webapi.AssemblyInfoInputs.cache
+C:\Users\Naty XD\Downloads\Alimente-se-Bem-BackEnd\alimentesebem.sesi.solution\alimentesebem.sesi.webapi\obj\Debug\netcoreapp2.0\alimentesebem.sesi.webapi.AssemblyInfo.cs
+C:\Users\Naty XD\Downloads\Alimente-se-Bem-BackEnd\alimentesebem.sesi.solution\alimentesebem.sesi.webapi\obj\Debug\netcoreapp2.0\alimentesebem.sesi.webapi.dll
+C:\Users\Naty XD\Downloads\Alimente-se-Bem-BackEnd\alimentesebem.sesi.solution\alimentesebem.sesi.webapi\obj\Debug\netcoreapp2.0\alimentesebem.sesi.webapi.pdb
+C:\Users\Naty XD\Downloads\Alimente-se-Bem-BackEnd\alimentesebem.sesi.solution\alimentesebem.sesi.webapi\bin\Debug\netcoreapp2.0\alimentesebem.sesi.domain.dll
+C:\Users\Naty XD\Downloads\Alimente-se-Bem-BackEnd\alimentesebem.sesi.solution\alimentesebem.sesi.webapi\bin\Debug\netcoreapp2.0\alimentesebem.sesi.repository.dll
+C:\Users\Naty XD\Downloads\Alimente-se-Bem-BackEnd\alimentesebem.sesi.solution\alimentesebem.sesi.webapi\bin\Debug\netcoreapp2.0\alimentesebem.sesi.repository.pdb
+C:\Users\Naty XD\Downloads\Alimente-se-Bem-BackEnd\alimentesebem.sesi.solution\alimentesebem.sesi.webapi\bin\Debug\netcoreapp2.0\alimentesebem.sesi.domain.pdb
+C:\Users\Naty XD\Downloads\Alimente-se-Bem-BackEnd\alimentesebem.sesi.solution\alimentesebem.sesi.webapi\bin\DEBUG\netcoreapp2.0\AlimenteSeBemAPI.xml

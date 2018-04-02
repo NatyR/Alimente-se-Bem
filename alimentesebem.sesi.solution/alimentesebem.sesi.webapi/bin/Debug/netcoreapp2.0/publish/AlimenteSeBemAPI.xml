@@ -1,0 +1,768 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>alimentesebem.sesi.webapi</name>
+    </assembly>
+    <members>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.AgendaController.GetAction">
+            <summary>
+            Retorna uma lista de Eventos cadastrados na base
+            </summary>
+            <returns>Lista de Eventos</returns>
+            <response code="200"> Retorna uma lista de eventos</response>
+            <response code="400"> Ocorreu um erro</response>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.AgendaController.GetAction(System.Int32)">
+            <summary>
+            Retorna o Evento via ID
+            </summary>
+            <param name="id">Identificador</param>
+            <returns>Retorna o Evento via ID</returns>
+            <response code="200"> Retorna o Evento por ID</response>
+            <response code="400"> Ocorreu um erro</response>
+            <response code="404"> Evento não Encontrado</response>
+            [Route("Busca de registro por Id")]
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.AgendaController.BuscarTag(System.String)">
+            <summary>
+            Retorna o Evento relacionado a tag pesquisada
+            </summary>
+            <param name="id">Identificador</param>
+            <returns>Retorna o Evento via ID</returns>
+            <response code="200"> Retorna o evento relacionado a tag</response>
+            <response code="400"> Ocorreu um erro</response>
+            <response code="404"> Evento não Encontrado</response>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.AgendaController.Cadastrar(alimentesebem.sesi.domain.Entities.Agenda)">
+             <summary>
+             Realizar o Cadastro de um Evento.
+             </summary>
+             <param name="cli">Evento</param>
+             <summary>
+             Cadastra o Evento desejado de acordo com a data do mesmo
+             </summary>        
+             <param name="cli">Evento</param>
+            <remarks>
+             Modelo de dados que deve ser enviado para cadastrar o Evento:
+            
+                 POST /Agenda {Obrigatório ter uma Unidade_Sesi cadastrada para vincular á Agenda}
+                 { 
+                     "titulo" : "titulo do Evento" ,
+                     "descricao" : "descrição do Evento",
+                     "data_evento" : "data do Evento",
+                     "valor" : "valor do evento (inserir '00,00' caso seja gratuito)",
+                     "tag" : "separado por ','", 
+                     "id_unidade" : Id da unidade do Sesi onde acontecerá o evento   
+                 } 
+             
+             </remarks>
+             <response code="200"> Retorna o Evento cadastrado</response>
+             <response code="400"> Ocorreu um erro</response>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.AgendaController.Atualizar(System.Int32,alimentesebem.sesi.domain.Entities.Agenda)">
+            <summary>
+            Atualizar um evento da página (por Id).
+            </summary>
+            <param name="id">Identificador.</param>
+            <param name="evento">Dados do evento.</param>
+            <response code="200"> Retorna o Evento atualizado.</response>
+            <response code="400"> Ocorreu um erro.</response>
+            <returns></returns>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.AgendaController.Deletar(System.Int32)">
+            <summary>
+            Exclui um evento do sistema (por Id)
+            </summary>
+            <param name="id">Identificador</param>
+            <response code="200"> Evento removido com êxito</response>
+            <response code="400"> Ocorreu um erro</response>
+            <returns></returns>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.AlternativasController.GetAction">
+            <summary>
+            Retorna uma lista de Alternativas cadastrados na base
+            </summary>
+            <returns>Lista de Alternativas</returns>
+            <response code="200"> Retorna uma lista de Alternativas</response>
+            <response code="400"> Ocorreu um erro</response>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.Categorias_NoticiasController.GetAction">
+            <summary>
+            Retorna todas as Categorias de Noticias já cadastradas
+            </summary>
+            <returns>Lista de Categorias de Notícias</returns>
+            <response code="200"> Retorna uma Categoria</response>
+            <response code="400"> Ocorreu um erro</response>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.Categorias_NoticiasController.GetAction(System.Int32)">
+            <summary>
+            Retorna  uma Categoria de Noticia filtrada por ID
+            </summary>
+            <param name="id">Identificador</param>
+            <returns>Retorna a  Categoria via ID</returns>
+            <response code="200"> Retorna uma Categoria</response>
+            <response code="400"> Ocorreu um erro</response>
+            <response code="404"> Categoria não Encontrado</response>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.Categorias_NoticiasController.Cadastrar(alimentesebem.sesi.domain.Entities.Categorias_Noticias)">
+             <summary>
+             Realizar o Cadastro de uma Categoria de Notícia.
+             </summary>
+             <param name="cli">Categoria de Notícia</param>
+             <summary>
+             Cadastra a Categoria desejada.
+             </summary>        
+             <param name="cli">Categoria de Notícia</param>
+            <remarks>
+             Modelo de dados que deve ser enviado para cadastrar a Categoria de Notícia:
+            
+                 POST /Categorias_Notícias
+                 {
+                     "nome" : "titulo da Categoria" 
+                 } 
+             
+             </remarks>
+             <response code="200"> Retorna a Categoria cadastrado</response>
+             <response code="400"> Ocorreu um erro</response>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.Categorias_NoticiasController.Atualizar(alimentesebem.sesi.domain.Entities.Categorias_Noticias)">
+            <summary>
+            Atualizar uma Categoria de Noticia da página (por Id)
+            </summary>
+            <param name="id">Identificador</param>
+            <response code="200"> Retorna a Categoria atualizada</response>
+            <response code="400"> Ocorreu um erro</response>
+            <returns></returns>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.Categorias_NoticiasController.Excluir(System.Int32)">
+            <summary>
+            Exclui uma Categoria de Noticia da página (por Id)
+            </summary>
+            <param name="id">Identificador</param>
+            <response code="200"> Categoria removida com êxito</response>
+            <response code="400"> Ocorreu um erro</response>
+            <returns></returns>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.Categorias_VideosController.GetAction">
+            <summary>
+            Retorna todas as Categorias de Vídeos já cadastradas
+            </summary>
+            <returns>Lista de Categorias de Vídeos</returns>
+            <response code="200"> Retorna uma Categoria</response>
+            <response code="400"> Ocorreu um erro</response>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.Categorias_VideosController.GetAction(System.Int32)">
+            <summary>
+            Retorna  uma Categoria de Video filtrada por ID
+            </summary>
+            <param name="id">Identificador</param>
+            <returns>Retorna a  Categoria via ID</returns>
+            <response code="200"> Retorna uma Categoria</response>
+            <response code="400"> Ocorreu um erro</response>
+            <response code="404"> Categoria não Encontrado</response>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.Categorias_VideosController.Cadastrar(alimentesebem.sesi.domain.Entities.Categorias_Videos)">
+             <summary>
+             Realizar o Cadastro de uma Categoria de Vídeos.
+             </summary>
+             <param name="cli">Categoria de Vídeos</param>
+             <summary>
+             Cadastra a Categoria desejada.
+             </summary>        
+             <param name="cli">Categoria de Vídeos</param>
+            <remarks>
+             Modelo de dados que deve ser enviado para cadastrar a Categoria de Vídeos:
+            
+                 POST /Categorias_Videos
+                 {
+                     "nome" : "titulo da Categoria" 
+                 } 
+             
+             </remarks>
+             <response code="200"> Retorna a Categoria cadastrado</response>
+             <response code="400"> Ocorreu um erro</response>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.Categorias_VideosController.Atualizar(alimentesebem.sesi.domain.Entities.Categorias_Videos)">
+            <summary>
+            Atualizar uma Categoria de Vídeos da página (por Id)
+            </summary>
+            <param name="id">Identificador</param>
+            <response code="200"> Retorna a Categoria atualizada</response>
+            <response code="400"> Ocorreu um erro</response>
+            <returns></returns>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.Categorias_VideosController.Excluir(System.Int32)">
+            <summary>
+            Exclui uma Categoria de Vídeos da página (por Id)
+            </summary>
+            <param name="id">Identificador</param>
+            <response code="200"> Categoria removida com êxito</response>
+            <response code="400"> Ocorreu um erro</response>
+            <returns></returns>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.DispositivoController.GetAction">
+            <summary>
+            Retorna uma lista de Dispositivos cadastrados na base
+            </summary>
+            <returns>Lista de Dispositivos</returns>
+            <response code="200"> Retorna uma lista de Dispositivos</response>
+            <response code="400"> Ocorreu um erro</response>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.DispositivoController.GetAction(System.Int32)">
+            <summary>
+            Retorna o Dispositivo via ID
+            </summary>
+            <param name="id">Identificador</param>
+            <returns>Retorna o Dispositivo via ID</returns>
+            <response code="200"> Retorna o Dispositivo por ID</response>
+            <response code="400"> Ocorreu um erro</response>
+            <response code="404"> Dispositivo não Encontrado</response>
+            [Route("Busca de registro por Id")]
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.DispositivoController.Cadastrar(alimentesebem.sesi.domain.Entities.Dispositivo)">
+             <summary>
+             Realizar o Cadastro de um Dispositivo.
+             </summary>
+             <param name="cli">Dispositivo</param>
+             <summary>
+             Cadastra o Dispositivo desejado 
+             </summary>        
+             <param name="cli">Dispositivo</param>
+            <remarks>
+             Modelo de dados que deve ser enviado para cadastrar o Dispositivo:
+            
+                 POST /Dispositivo {Obrigatório vincular ao dispositivo a um Restaurante}
+                 {
+                     "marca" : "fabricante do dispositivo" ,
+                     "modelo" : "modelo do dispositivo",
+                     "serial" : "número de série",
+                     "id_restaurante" : "ID do restaurante que será vinculado o Dispositivo"   
+                 } 
+             
+             </remarks>
+             <response code="200"> Retorna o Dispositivo cadastrado</response>
+             <response code="400"> Ocorreu um erro</response>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.DispositivoController.Atualizar(alimentesebem.sesi.domain.Entities.Dispositivo)">
+            <summary>
+            Atualizar um Dispositivo (por Id)
+            </summary>
+            <param name="id">Identificador</param>
+            <response code="200"> Retorna o Dispositivo atualizado</response>
+            <response code="400"> Ocorreu um erro</response>
+            <returns></returns>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.NoticiasController.GetAction">
+            <summary>
+            Retorna uma lista de Notícias cadastrados na base
+            </summary>
+            <returns>Lista de Notícias</returns>
+            <response code="200"> Retorna uma lista de Notícias</response>
+            <response code="400"> Ocorreu um erro</response>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.NoticiasController.GetAction(System.Int32)">
+            <summary>
+            Retorna a Notícia via ID
+            </summary>
+            <param name="id">Identificador</param>
+            <returns>Retorna a Notícia via ID</returns>
+            <response code="200"> Retorna a Notícia por ID</response>
+            <response code="400"> Ocorreu um erro</response>
+            <response code="404"> Notícia não Encontrado</response>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.NoticiasController.Cadastrar(alimentesebem.sesi.domain.Entities.Noticias)">
+             <summary>
+             Realizar o Cadastro de uma Notícia.
+             </summary>
+             <param name="cli">Notícia</param>
+             <summary>
+             Cadastra a Notícia desejado.
+             </summary>        
+             <param name="cli">Notícia</param>
+            <remarks>
+             Modelo de dados que deve ser enviado para cadastrar a Notícia:
+            
+                 POST /Evento
+                 {
+                     "titulo" : "titulo da Notícia" ,
+                     "headline" : "headline da Notícia",
+                     "descricao" : "descricao da Notícia", 
+                     "data_criacao" : "data de criacao da Notícia",
+                     "imagem" : "data_criacao da Notícia", 
+                     "link_externo" : "vinculando a notícia a outras páginas", 
+                     "id_Cat_Noticias" : "id da categoria para a notícia em questão" 
+                 } 
+             
+             </remarks>
+             <response code="200"> Retorna a Notícia cadastrado</response>
+             <response code="400"> Ocorreu um erro</response>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.NoticiasController.Atualizar(alimentesebem.sesi.domain.Entities.Noticias)">
+            <summary>
+            Atualizar a Notícia  da página (por Id)
+            </summary>
+            <param name="id">Identificador</param>
+            <response code="200"> Retorna a Notícia atualizada</response>
+            <response code="400"> Ocorreu um erro</response>
+            <returns></returns>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.NoticiasController.Excluir(System.Int32)">
+            <summary>
+            Exclui uma Noticia do sistema (por Id)
+            </summary>
+            <param name="id">Identificador</param>
+            <response code="200"> Noticia removida com êxito</response>
+            <response code="400"> Ocorreu um erro</response>
+            <returns></returns>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.NutricionistasController.GetAction">
+            <summary>
+            Retorna uma lista de Nutricionistas cadastradas na base
+            </summary>
+            <returns>Lista de Nutricionistas</returns>
+            <response code="200"> Retorna uma lista de Nutricionistas</response>
+            <response code="400"> Ocorreu um erro</response>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.NutricionistasController.GetAction(System.Int32)">
+            <summary>
+            Retorna a Nutricionista via ID
+            </summary>
+            <param name="id">Identificador</param>
+            <returns>Retorna a Nutricionista via ID</returns>
+            <response code="200"> Retorna a Nutricionistas por ID</response>
+            <response code="400"> Ocorreu um erro</response>
+            <response code="404"> Notícia não Encontrado</response>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.NutricionistasController.Cadastrar(alimentesebem.sesi.domain.Entities.Nutricionista)">
+             <summary>
+             Realizar o Cadastro de uma Nutricionista.
+             </summary>
+             <param name="cli">Nutricionista</param>
+             <summary>
+             Cadastra a Nutricionista desejado.
+             </summary>        
+             <param name="cli">Nutricionista</param>
+            <remarks>
+             Modelo de dados que deve ser enviado para cadastrar a Nutricionista:
+            
+                 POST /Evento
+                 {
+                     "nome" : "nome da Nutricionista" ,
+                     "email" : "email da Nutricionista",
+                     "NIF" : "NIF da Nutricionista", 
+                     "cargo" : "cargo da Nutricionista",
+                     "local" : "rua xxx, número do local",
+                     "CEP" : " Formato xxxxx-xxx",
+                     "cidade" : "cidade",
+                     "estado" : "ex. SP"                  
+                 } 
+             
+             </remarks>
+             <response code="200"> Retorna a Nutricionista cadastrado</response>
+             <response code="400"> Ocorreu um erro</response>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.NutricionistasController.Atualizar(alimentesebem.sesi.domain.Entities.Nutricionista)">
+            <summary>
+            Atualizar a Nutricionista (por Id)
+            </summary>
+            <param name="id">Identificador</param>
+            <response code="200"> Retorna a Nutricionista atualizada</response>
+            <response code="400"> Ocorreu um erro</response>
+            <returns></returns>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.NutricionistasController.Excluir(System.Int32)">
+            <summary>
+            Exclui uma Nutricionista do sistema (por Id)
+            </summary>
+            <param name="id">Identificador</param>
+            <response code="200"> Nutricionista removida com êxito</response>
+            <response code="400"> Ocorreu um erro</response>
+            <returns></returns>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.PerguntasController.GetAction">
+            <summary>
+            Retorna uma lista de Perguntas cadastrados na base
+            </summary>
+            <returns>Lista de Perguntas</returns>
+            <response code="200"> Retorna uma lista de Perguntas</response>
+            <response code="400"> Ocorreu um erro</response>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.PerguntasController.GetAction(System.Int32)">
+            <summary>
+            Retorna a Pergunta via ID
+            </summary>
+            <param name="id">Identificador</param>
+            <returns>Retorna a Pergunta via ID</returns>
+            <response code="200"> Retorna a Pergunta por ID</response>
+            <response code="400"> Ocorreu um erro</response>
+            <response code="404"> Pergunta não Encontrado</response>
+            [Route("Busca de registro por Id")]
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.PerguntasController.BuscaporDispositivo(System.Int32)">
+            <summary>
+            Retorna as perguntas vinculadas ao Dispositivo
+            </summary>
+            <param name="id">Identificador</param>
+            <returns>Retorna as perguntas vinculadas ao Dispositivo</returns>
+            <response code="200"> Retorna as perguntas vinculadas ao Dispositivo</response>
+            <response code="400"> Ocorreu um erro</response>
+            <response code="404"> Pergunta não Encontrado</response>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.PerguntasController.Cadastrar(alimentesebem.sesi.domain.Entities.Perguntas)">
+             <summary>
+             Realizar o Cadastro de uma Pergunta.
+             </summary>
+             <param name="cli">Pergunta</param>
+             <summary>
+             Cadastro da Pergunta
+             </summary>        
+             <param name="cli">Pergunta</param>
+            <remarks>
+             Modelo de dados que deve ser enviado para cadastrar o Pergunta:
+            
+                 POST /Perguntas 
+                 { 
+                     "descricao" : "descrição da pergunta",
+                     "data_inicio" : "Data de inicio da exibição da questão",
+                     "data_final" : "Data final da exibição da questão",
+                     "ordem" : "O campo Ordem deve ter o número da posição da pergunta",
+                     "id_dispositivo" : Id do dispositivo que ficará vinculado à Pergunta,  
+                     "alternativa" : Deixar por padrão 1   
+                 } 
+             
+             </remarks>
+             <response code="200"> Retorna a Pergunta cadastrada</response>
+             <response code="400"> Ocorreu um erro</response>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.PerguntasController.Atualizar(alimentesebem.sesi.domain.Entities.Perguntas)">
+            <summary>
+            Atualizar uma Pergunta da página (por Id)
+            </summary>
+            <param name="id">Identificador</param>
+            <response code="200"> Retorna a Pergunta atualizada</response>
+            <response code="400"> Ocorreu um erro</response>
+            <returns></returns>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.PerguntasController.Deletar(System.Int32)">
+            <summary>
+            Exclui uma Pergunta do sistema (por Id)
+            </summary>
+            <param name="id">Identificador</param>
+            <response code="200"> Pergunta removida com êxito</response>
+            <response code="400"> Ocorreu um erro</response>
+            <returns></returns>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.RespostasController.GetAction">
+            <summary>
+            Retorna uma lista de Respostas cadastrados na base
+            </summary>
+            <returns>Lista de Respostas</returns>
+            <response code="200"> Retorna uma lista de Respostas</response>
+            <response code="400"> Ocorreu um erro</response>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.RespostasController.GetAction(System.Int32)">
+            <summary>
+            Retorna a Resposta via ID
+            </summary>
+            <param name="id">Identificador</param>
+            <returns>Retorna a Resposta via ID</returns>
+            <response code="200"> Retorna a Resposta por ID</response>
+            <response code="400"> Ocorreu um erro</response>
+            <response code="404"> Resposta não Encontrado</response>
+            [Route("Busca de registro por Id")]
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.RespostasController.Cadastrar(alimentesebem.sesi.domain.Entities.Respostas)">
+             <summary>
+             Realizar o Cadastro de uma Resposta.
+             </summary>
+             <param name="cli">Resposta</param>
+             <summary>
+             Cadastro da Resposta
+             </summary>        
+             <param name="cli">Resposta</param>
+            <remarks>
+             Modelo de dados que deve ser enviado para cadastrar o Resposta:
+            
+                 POST /Respostas 
+                 { 
+                     "resposta" : "Alternativa Escolhida",
+                     "data_resposta" : "Data em que a pergunta foi respondida",        
+                     "id_pergunta" : "ID da pergunta"    
+                 } 
+             
+             </remarks>
+             <response code="200"> Retorna a Resposta cadastrada</response>
+             <response code="400"> Ocorreu um erro</response>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.RespostasController.Atualizar(alimentesebem.sesi.domain.Entities.Respostas)">
+            <summary>
+            Atualizar uma Resposta da página (por Id)
+            </summary>
+            <param name="id">Identificador</param>
+            <response code="200"> Retorna a Resposta atualizada</response>
+            <response code="400"> Ocorreu um erro</response>
+            <returns></returns>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.RespostasController.Deletar(System.Int32)">
+            <summary>
+            Exclui uma Resposta do sistema (por Id)
+            </summary>
+            <param name="id">Identificador</param>
+            <response code="200"> Resposta removida com êxito</response>
+            <response code="400"> Ocorreu um erro</response>
+            <returns></returns>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.RespostasController.RelatorioPerguntaID(System.Int32)">
+            <summary>
+            Retorna o numero de respostas de cada alternativa para a pergunta inserida por ID
+            </summary>
+            <param name="id">Identificador</param>
+            <returns>Retorna o numero de respostas de cada alternativa para a pergunta inserida por ID</returns>
+            <response code="200"> Retorna o numero de respostas de cada alternativa a pergunta inserida por ID</response>
+            <response code="400"> Ocorreu um erro</response>
+            <response code="404"> Pergunta não Encontrado</response>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.RestauranteController.GetAction">
+            <summary>
+            Retorna uma lista de Restaurantes cadastrados na base
+            </summary>
+            <returns>Lista de Restaurantes</returns>
+            <response code="200"> Retorna uma lista de Restaurantes</response>
+            <response code="400"> Ocorreu um erro</response>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.RestauranteController.GetAction(System.Int32)">
+            <summary>
+            Retorna o Restaurantes via ID
+            </summary>
+            <param name="id">Identificador</param>
+            <returns>Retorna o Restaurantes via ID</returns>
+            <response code="200"> Retorna o Restaurantes por ID</response>
+            <response code="400"> Ocorreu um erro</response>
+            <response code="404"> Restaurantes não Encontrado</response>
+            [Route("Busca de registro por Id")]
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.RestauranteController.Cadastrar(alimentesebem.sesi.domain.Entities.Restaurante)">
+             <summary>
+             Realizar o Cadastro de um Restaurante.
+             </summary>
+             <param name="cli">Restaurantes</param>
+             <summary>
+             Cadastra o Restaurante desejado
+             </summary>        
+             <param name="cli">Restaurantes</param>
+            <remarks>
+             Modelo de dados que deve ser enviado para cadastrar o Restaurante:
+            
+                 POST /Restaurante 
+                 {
+                     "nome" : "nome do Restaurante" ,
+                     "local" : "rua xxx, número do local",
+                     "cep" : "formato 00000-000",
+                     "cidade" : "Município do Restaurante",   
+                     "estado" : "ex. "SP"    
+                 } 
+             
+             </remarks>
+             <response code="200"> Retorna o Restaurante cadastrado</response>
+             <response code="400"> Ocorreu um erro</response>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.RestauranteController.Atualizar(alimentesebem.sesi.domain.Entities.Restaurante)">
+            <summary>
+            Atualizar um restaurante (por Id)
+            </summary>
+            <param name="id">Identificador</param>
+            <response code="200"> Retorna o Restaurante atualizado</response>
+            <response code="400"> Ocorreu um erro</response>
+            <returns></returns>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.RestauranteController.Excluir(System.Int32)">
+            <summary>
+            Exclui um restaurante (por Id)
+            </summary>
+            <param name="id">Identificador</param>
+            <response code="200"> Restaurante removido com êxito</response>
+            <response code="400"> Ocorreu um erro</response>
+            <returns></returns>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.Unidades_SesiController.GetAction">
+            <summary>
+            Retorna uma lista de Unidades do Sesi cadastradas na base
+            </summary>
+            <returns>Lista de Unidades</returns>
+            <response code="200"> Retorna uma lista de Unidades</response>
+            <response code="400"> Ocorreu um erro</response>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.Unidades_SesiController.GetAction(System.Int32)">
+            <summary>
+            Retorna a Unidade via ID
+            </summary>
+            <param name="id">Identificador</param>
+            <returns>Retorna a Unidade via ID</returns>
+            <response code="200"> Retorna a Unidade por ID</response>
+            <response code="400"> Ocorreu um erro</response>
+            <response code="404"> Unidade não Encontrado</response>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.Unidades_SesiController.Cadastrar(alimentesebem.sesi.domain.Entities.Unidades_Sesi)">
+             <summary>
+             Realizar o Cadastro de uma Unidade.
+             </summary>
+             <param name="cli">Unidade Sesi</param>
+             <summary>
+             Cadastra a Unidade desejado.
+             </summary>        
+             <param name="cli">Unidade</param>
+            <remarks>
+             Modelo de dados que deve ser enviado para cadastrar a Unidade:
+            
+                 POST /Unidades_Sesi
+                 {
+                     "nome" : "nome da Unidade" ,
+                     "codigo_unidade" : "codigo_unidade da Unidade",
+                     "telefone" : "telefone da Unidade",
+                     "local" : "rua xxx, número do local",
+                     "cep" : "formato 00000-000",
+                     "cidade" : "Município do Restaurante",   
+                     "estado" : "ex. "SP"    
+                 } 
+             
+             </remarks>
+             <response code="200"> Retorna a Unidade cadastrado</response>
+             <response code="400"> Ocorreu um erro</response>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.Unidades_SesiController.Atualizar(alimentesebem.sesi.domain.Entities.Unidades_Sesi)">
+            <summary>
+            Atualizar a Unidade (por Id)
+            </summary>
+            <param name="id">Identificador</param>
+            <response code="200"> Retorna a Unidade atualizada</response>
+            <response code="400"> Ocorreu um erro</response>
+            <returns></returns>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.Unidades_SesiController.Excluir(System.Int32)">
+            <summary>
+            Exclui uma Unidade do sistema (por Id)
+            </summary>
+            <param name="id">Unidade</param>
+            <response code="200"> Unidade removida com êxito</response>
+            <response code="400"> Ocorreu um erro</response>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.UsuarioController.GetAction">
+            <summary>
+            Retorna uma lista de Usuarios cadastrados na base
+            </summary>
+            <returns>Lista de Usuarios</returns>
+            <response code="200"> Retorna uma lista de Usuarios</response>
+            <response code="400"> Ocorreu um erro</response>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.UsuarioController.GetAction(System.Int32)">
+            <summary>
+            Retorna o Usuario via ID
+            </summary>
+            <param name="id">Identificador</param>
+            <returns>Retorna o Usuario via ID</returns>
+            <response code="200"> Retorna o Usuario por ID</response>
+            <response code="400"> Ocorreu um erro</response>
+            <response code="404"> Unidade não Encontrado</response>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.UsuarioController.Cadastrar(alimentesebem.sesi.domain.Entities.Usuario)">
+             <summary>
+             Realizar o Cadastro de um Usuario.
+             </summary>
+             <param name="cli">Usuario</param>
+             <summary>
+             Cadastra o Usuario desejado.
+             </summary>        
+             <param name="cli">Usuario</param>
+            <remarks>
+             Modelo de dados que deve ser enviado para cadastrar a Usuario:
+            
+                 POST /Usuario
+                 {
+                     "nome" : "nome do Usuario" ,
+                     "email" : "teste@dominio.com",   
+                     "senha" : "mínimo 8 caracteres"                   
+                 } 
+             
+             </remarks>
+             <response code="200"> Retorna o Usuario cadastrado</response>
+             <response code="400"> Ocorreu um erro</response>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.UsuarioController.Atualizar(alimentesebem.sesi.domain.Entities.Usuario)">
+            <summary>
+            Atualizar o Usuario (por Id)
+            </summary>
+            <param name="id">Identificador</param>
+            <response code="200"> Retorna o Usuario atualizada</response>
+            <response code="400"> Ocorreu um erro</response>
+            <returns></returns>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.UsuarioController.Excluir(System.Int32)">
+            <summary>
+            Exclui um Usuario da página (por Id)
+            </summary>
+            <param name="id">Usuario</param>
+            <response code="200"> Usuario removido com êxito</response>
+            <response code="400"> Ocorreu um erro</response>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.VideosController.GetAction">
+            <summary>
+            Retorna uma lista de Vídeos cadastrados na base
+            </summary>
+            <returns>Lista de Vídeos</returns>
+            <response code="200"> Retorna uma lista de Vídeos</response>
+            <response code="400"> Ocorreu um erro</response>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.VideosController.GetAction(System.Int32)">
+            <summary>
+            Retorna o Vídeo via ID
+            </summary>
+            <param name="id">Identificador</param>
+            <returns>Retorna o Vídeo via ID</returns>
+            <response code="200"> Retorna o Vídeo por ID</response>
+            <response code="400"> Ocorreu um erro</response>
+            <response code="404"> Vídeos não Encontrado</response>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.VideosController.Cadastrar(alimentesebem.sesi.domain.Entities.Videos)">
+             <summary>
+             Realizar o Cadastro de um Vídeos.
+             </summary>
+             <param name="cli">Vídeos</param>
+             <summary>
+             Cadastra os Vídeos desejado.
+             </summary>        
+             <param name="cli">Vídeos</param>
+            <remarks>
+             Modelo de dados que deve ser enviado para cadastrar os Vídeos:
+            
+                 POST /Vídeos
+                 {
+                     "titulo" : "titulo do Vídeo" ,
+                     "descricao" : "descricao do Vídeo", 
+                     "URL" : "URL do Vídeo",
+                     "data_publicacao" : "Data de postagem do vídeo",
+                     "link_externo" : "vincular o vídeo a outras páginas",
+                     "id_Cat_Videos" : "id da Categoria do Vídeo"                  
+                 } 
+             
+             </remarks>
+             <response code="200"> Retorna o Vídeo cadastrado</response>
+             <response code="400"> Ocorreu um erro</response>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.VideosController.Atualizar(alimentesebem.sesi.domain.Entities.Videos)">
+            <summary>
+            Atualizar o Video (por Id)
+            </summary>
+            <param name="id">Identificador</param>
+            <response code="200"> Retorna o Video atualizada</response>
+            <response code="400"> Ocorreu um erro</response>
+        </member>
+        <member name="M:alimentesebem.sesi.webapi.Controllers.VideosController.Excluir(System.Int32)">
+            <summary>
+            Exclui um Video da página (por Id)
+            </summary>
+            <param name="id">Video</param>
+            <response code="200"> Video removido com êxito</response>
+            <response code="400"> Ocorreu um erro</response>
+        </member>
+    </members>
+</doc>
