@@ -1,0 +1,9 @@
+alimentesebem.sesi.domain/bin/
+alimentesebem.sesi.domain/obj/
+
+alimentesebem.sesi.repository/bin/
+alimentesebem.sesi.repository/obj/
+
+alimentesebem.sesi.webapi/bin/
+alimentesebem.sesi.webapi/obj/
+alimentesebem.sesi.webapi/appsettings.json
